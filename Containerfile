@@ -5,7 +5,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     ca-certificates curl dbus libasound2t64 libfuse2t64 libglib2.0-0 \
-    libnss3 libsecret-1-0 libxcb-cursor0 libxkbcommon-x11-0 libxkbfile1 libxss1 xdg-utils && \
+    libice6 libnss3 libsecret-1-0 libsm6 libxcb-cursor0 libxkbcommon-x11-0 \
+    libxkbfile1 libxss1 xdg-utils && \
     curl -fsSL https://dl.acronis.com/u/cyber-desktop-client/acronisconnectclient-1.1-25041.x86_64.deb \
       -o /tmp/acronis-connect.deb && \
     echo '21b545e303194569d463bf70b2df802ddd86aeccb3f64732fc9b1cb4401dd565  /tmp/acronis-connect.deb' | sha256sum -c - && \
