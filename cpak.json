@@ -5,6 +5,7 @@
   "description": "Manage remote connections, credentials, screens and file transfers.",
   "version": "1.1-25041",
   "image": "ghcr.io/containerpak/acronis-connect:main",
+  "runtime_sources": [{"name": "acronisconnectclient-1.1-25041.x86_64.deb", "url": "https://dl.acronis.com/u/cyber-desktop-client/acronisconnectclient-1.1-25041.x86_64.deb", "sha256": "21b545e303194569d463bf70b2df802ddd86aeccb3f64732fc9b1cb4401dd565", "size": 137935400, "installer": "dpkg"}],
   "binaries": ["/usr/bin/acronisconnectclient", "/usr/bin/acc"],
   "desktop_entries": ["/usr/share/applications/acronisconnectclient.desktop"],
   "dependencies": [],
