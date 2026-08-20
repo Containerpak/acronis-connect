@@ -49,8 +49,8 @@ jobs:
           cache-to: type=gha,mode=max
           provenance: mode=max
           sbom: true
-      - name: Verify exports
-        run: docker run --rm ghcr.io/containerpak/acronis-connect:main sh -c 'test -x /usr/bin/acronisconnectclient && test -x /usr/bin/acc && test -f /usr/share/applications/acronisconnectclient.desktop'
+      - name: Verify runtime image
+        run: docker run --rm ghcr.io/containerpak/acronis-connect:main sh -c 'test ! -e /usr/bin/acronisconnectclient && test -x /usr/bin/xdg-open'
 
       - uses: sigstore/cosign-installer@d7543c93d881b35a8faa02e8e3605f69b7a1ce62
 
