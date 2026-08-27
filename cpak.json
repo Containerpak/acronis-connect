@@ -1,27 +1,35 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v2.json",
-  "manifest_version": "2.0",
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "Acronis Connect Client",
   "description": "Manage remote connections, credentials, screens and file transfers.",
   "version": "1.1-25041",
-  "image": "ghcr.io/containerpak/acronis-connect:main",
-  "runtime_sources": [{"name": "acronisconnectclient-1.1-25041.x86_64.deb", "url": "https://dl.acronis.com/u/cyber-desktop-client/acronisconnectclient-1.1-25041.x86_64.deb", "sha256": "21b545e303194569d463bf70b2df802ddd86aeccb3f64732fc9b1cb4401dd565", "size": 137935400, "installer": "dpkg"}],
-  "binaries": ["/usr/bin/acronisconnectclient", "/usr/bin/acc"],
-  "desktop_entries": ["/usr/share/applications/acronisconnectclient.desktop"],
+  "image": "ghcr.io/containerpak/acronis-connect@sha256:a59179bebfcdee3ed33534dbb7a76885564f3196f70da25e50b061c07e999282",
+  "runtime_sources": [
+    {
+      "name": "acronisconnectclient-1.1-25041.x86_64.deb",
+      "url": "https://dl.acronis.com/u/cyber-desktop-client/acronisconnectclient-1.1-25041.x86_64.deb",
+      "sha256": "21b545e303194569d463bf70b2df802ddd86aeccb3f64732fc9b1cb4401dd565",
+      "size": 137935400,
+      "installer": "dpkg"
+    }
+  ],
+  "binaries": [
+    "/usr/bin/acronisconnectclient",
+    "/usr/bin/acc"
+  ],
+  "desktop_entries": [
+    "/usr/share/applications/acronisconnectclient.desktop"
+  ],
   "dependencies": [],
   "addons": [],
   "idle_time": 0,
   "override": {
-    "socketX11": true,
     "socketWayland": true,
     "socketPulseAudio": true,
-    "socketSessionBus": true,
-    "socketSystemBus": false,
     "socketSshAgent": true,
     "socketCups": false,
     "socketGpgAgent": false,
-    "socketAtSpiBus": true,
-    "socketBluetooth": false,
     "deviceDri": true,
     "deviceKvm": false,
     "deviceShm": true,
@@ -33,7 +41,12 @@
     "deviceAll": false,
     "notification": true,
     "openURI": true,
-    "filesystem": [{"path": "home", "access": "read-write"}],
+    "filesystem": [
+      {
+        "path": "home",
+        "access": "read-write"
+      }
+    ],
     "env": [],
     "network": true,
     "process": false,
@@ -41,7 +54,6 @@
     "memoryMaxMB": 0,
     "cpuQuota": 0,
     "pidsMax": 0,
-    "asRoot": false,
-    "allowedHostCommands": ["xdg-open"]
+    "asRoot": false
   }
 }
