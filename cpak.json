@@ -4,7 +4,7 @@
   "name": "Acronis Connect Client",
   "description": "Manage remote connections, credentials, screens and file transfers.",
   "version": "1.1-25041",
-  "image": "ghcr.io/containerpak/acronis-connect@sha256:b32bedc22f176bb38ad4075d8fc51de72deb1a1d5a3bb2c6a6ce7e6a2709f6da",
+  "image": "ghcr.io/containerpak/acronis-connect@sha256:330568b2d714bd07993bfe8ba53437810517d4aff15e36cd76f24c4dfe41d80d",
   "runtime_sources": [
     {
       "name": "acronisconnectclient-1.1-25041.x86_64.deb",
